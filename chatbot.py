@@ -121,34 +121,6 @@ def get_answer(message_text):
 #     	count+=1
     return topintent
     
-    # url to QnA
-#     url = "https://sakuraava.azurewebsites.net/qnamaker/knowledgebases/d76b34d0-14f1-4477-8a71-df58d14893bf/generateAnswer"
-
-# 發送request到QnAMaker Endpoint要答案
-#     response = requests.post(
-#                    url,
-#                    json.dumps({'question': message_text}),
-#                    headers={
-#                        'Content-Type': 'application/json',
-#                        'Authorization': 'EndpointKey cace9f9b-ecfb-4c07-a15c-e20f60298b55'
-#                    }
-#                )
-#     print(response)
-#     data = response.json()
-#     
-#     print(data)
- #    try: 
-#         #我們使用免費service可能會超過限制（一秒可以發的request數）
-#         if "error" in data:
-#             return data["error"]["message"]
-#         if data['answers'][0]['questions']==[]:
-#             answer = "聽不懂"
-#         else:
-#             answer = data['answers'][0]['answer']
-#         return answer
-#     
-#     except Exception:
-#         return "Error occurs when finding answer"
 
 if __name__ == "__main__":
     app.run(port = 5000)
